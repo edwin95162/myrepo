@@ -1,0 +1,163 @@
+<html><!--mi comentario -->
+    <head>
+         <title>A web page</title>
+		 <!-- &(vocal)acute=tilde, &ntilde=ñ Ñ, &nbsp= espacio ; -->
+		 <link rel="icon" type="image/ico" href="icons/pass.png" /> <!-- agregar icono a la pestaña -->
+		     	 
+	
+	
+		<script>
+		
+function check(e) { 
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    //Tecla de retroceso para borrar, siempre la permite
+    if (tecla == 8) {
+        return true;
+    }
+
+    // Patron de entrada, en este caso solo acepta numeros y letras
+    patron = /[A-Za-z]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+		</script>
+		</head>
+		
+		<body>
+       <table align="center">
+			<td><br><font face="Arial" size="4" color="#000000">Formulario de registro</td>
+		</table>
+		
+		  <table align= "center">
+		<tr>
+			<td>Nombres:<font face="Arial" size="5" color="#FF0000">*</td>
+			<td><input type="text" name="nombre" placeholder="Ingrese nombres" 
+			onkeypress="return check(event)" required></td>
+		</tr>
+		
+		<tr>
+			<td>Apellidos:<font face="Arial" size="5" color="#FF0000">*</td>
+			<td><input type="text" name="apellido" placeholder="Ingrese apellidos" 
+			onkeypress="return check(event)"required></td> 
+		</tr>
+		
+		<tr>
+			<td>Tipo de identificación <font face="Arial" size="5" color="#FF0000">*</td>
+			<td align="left">
+			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');"> 
+<OPTION VALUE="link pagina 1">TI</OPTION>
+<OPTION VALUE="link pagina 2">CC</OPTION>
+<OPTION VALUE="link pagina 3">CE</OPTION>
+<OPTION VALUE="link pagina 4">RC</OPTION>
+<OPTION VALUE="link pagina 5">PS</OPTION>  
+</SELECT> 
+</td></br>
+		</tr> 
+		
+		<tr>
+			<td>Nro. Identificación: <font face="Arial" size="5" color="#FF0000">*</td>
+			<td><input type="text" name="identificación" placeholder="Ingrese Nro. Identificación" maxlength="16"
+			onkeypress="if (event.keyCode < 45 || event.keyCode >57) event.returnValue = false;" required></td> </br>
+		</tr>
+		
+		<tr>
+			<td>Genero: <font face="Arial" size="5" color="#FF0000">*</td>
+			<td align="left">
+			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');"> 
+<OPTION VALUE="link pagina 1">Masculino</OPTION>
+<OPTION VALUE="link pagina 2">Femenino</OPTION>
+<OPTION VALUE="link pagina 3">Otro</OPTION>
+</SELECT> 
+</td>
+		</tr> 
+		
+		<tr>
+			<td>Teléfono: </td>
+			<td><input type="text" name="dni" id="dni" value="" title="Introduce número" maxlength="9" 
+			onkeypress="if (event.keyCode < 45 || event.keyCode >57) event.returnValue = false;" />
+			</td>
+		</tr>
+		
+		<tr>
+			<td>Celular: <font face="Arial" size="5" color="#FF0000">*</td>
+			<td><input type="text" name="user" placeholder="Ingrese celular" maxlength="12" 
+			onkeypress="if (event.keyCode < 45 || event.keyCode >57) event.returnValue = false;" required></td> 
+		</tr>
+		
+		<tr>
+			<td>Departamento Nac: <font face="Arial" size="5" color="#FF0000">*</td>
+			<td align="left">
+			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');"> 
+<OPTION VALUE="link pagina 1">Nariño</OPTION>
+<OPTION VALUE="link pagina 2">Putumayo</OPTION>
+<OPTION VALUE="link pagina 3">Valle del Cauca</OPTION>
+<OPTION VALUE="link pagina 4">Antioquia</OPTION>
+<OPTION VALUE="link pagina 5">Cundinamarca</OPTION>
+<OPTION VALUE="link pagina 6">Caldas</OPTION>
+<OPTION VALUE="link pagina 7">Risaralda</OPTION>
+<OPTION VALUE="link pagina 8">Quindio</OPTION>
+<OPTION VALUE="link pagina 9">Meta</OPTION>
+<OPTION VALUE="link pagina 10">Cauca</OPTION>
+</SELECT> 
+</td>
+		</tr> 
+		
+		<tr>
+			<td align="left">Ciudad Nac: <font face="Arial" size="5" color="#FF0000">*</td>
+			<td align="left">
+			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');"> 
+<OPTION VALUE="link pagina 1">Cali</OPTION>
+<OPTION VALUE="link pagina 2">Popayán</OPTION>
+<OPTION VALUE="link pagina 3">Pasto</OPTION>
+<OPTION VALUE="link pagina 4">Bogotá</OPTION>
+<OPTION VALUE="link pagina 5">Villavicencio</OPTION>
+<OPTION VALUE="link pagina 6">Mocoa</OPTION>
+<OPTION VALUE="link pagina 7">Manizales</OPTION>
+<OPTION VALUE="link pagina 8">Medellin</OPTION>
+<OPTION VALUE="link pagina 9">Armenia</OPTION>
+<OPTION VALUE="link pagina 10">Pereira</OPTION>
+</SELECT> 
+</td>
+		</tr> 
+		
+		<tr>
+			<td>Correo Electrónico: <font face="Arial" size="5" color="#FF0000">*</td>
+			<td><input type="text" name="user" placeholder="Ingrese correo" required></td> 
+		</tr>
+		
+		<tr>
+			<td>Contraseña: <font face="Arial" size="5" color="#FF0000">*</td>
+			<td><input type="password" name="password" placeholder="Ingrese contraseña" required></td> 
+		</tr>
+		
+		<tr>
+			<td>Confirmar contraseña: <font face="Arial" size="5" color="#FF0000">*</td>
+			<td><input type="password" name="password" placeholder="Ingrese contraseña" required></td> 
+		</tr>
+		
+		<tr>
+			<td>Foto: </td>
+			<td align="left"><input type="file" name="file"  required></td> 
+		</tr>
+		
+		</table>
+		
+		<table align="center"><br>
+		<tr><div>
+			<td><input type="button" value="Registrarse"</td> 
+		</tr>
+		</table>
+		
+		</body>
+		</html>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
