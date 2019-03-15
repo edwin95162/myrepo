@@ -32,13 +32,13 @@ function check(e) {
 		  <table align= "center">
 		<tr>
 			<td>Nombres:<font face="Arial" size="5" color="#FF0000">*</td>
-			<td><input type="text" name="nombre" placeholder="Ingrese nombres" 
+			<td><input type="text" name="nombre" placeholder="Ingrese nombres" maxlength="40"
 			onkeypress="return check(event)" required></td>
 		</tr>
 		
 		<tr>
 			<td>Apellidos:<font face="Arial" size="5" color="#FF0000">*</td>
-			<td><input type="text" name="apellido" placeholder="Ingrese apellidos" 
+			<td><input type="text" name="apellido" placeholder="Ingrese apellidos" maxlength="40"
 			onkeypress="return check(event)"required></td> 
 		</tr>
 		
@@ -74,15 +74,15 @@ function check(e) {
 		
 		<tr>
 			<td>Teléfono: </td>
-			<td><input type="text" name="dni" id="dni" value="" title="Introduce número" maxlength="9" 
+			<td><input type="text" name="dni" id="dni" value="" title="Introduce número" maxlength="10" 
 			onkeypress="if (event.keyCode < 45 || event.keyCode >57) event.returnValue = false;" />
 			</td>
 		</tr>
 		
 		<tr>
-			<td>Celular: <font face="Arial" size="5" color="#FF0000">*</td>
-			<td><input type="text" name="user" placeholder="Ingrese celular" maxlength="12" 
-			onkeypress="if (event.keyCode < 45 || event.keyCode >57) event.returnValue = false;" required></td> 
+			<td>Celular: <font face="Arial" size="5"</td>
+			<td><input type="text" name="user" placeholder="Ingrese celular" maxlength="16" 
+			onkeypress="if (event.keyCode < 45 || event.keyCode >57) event.returnValue = false;"></td> 
 		</tr>
 		
 		<tr>
