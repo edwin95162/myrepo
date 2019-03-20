@@ -8,23 +8,24 @@
 	
 		<script>
 		
-function check(e) { 
-    tecla = (document.all) ? e.keyCode : e.which;
-
+			function check(e) { 
+			tecla = (document.all) ? e.keyCode : e.which;
+	
     //Tecla de retroceso para borrar, siempre la permite
-    if (tecla == 8) {
-        return true;
+			if (tecla == 8) {
+			return true;
     }
 
     // Patron de entrada, en este caso solo acepta numeros y letras
-    patron = /[A-Za-z]/;
-    tecla_final = String.fromCharCode(tecla);
-    return patron.test(tecla_final);
+			patron = /[A-Za-z]/;
+			tecla_final = String.fromCharCode(tecla);
+			return patron.test(tecla_final);
 }
 		</script>
 		</head>
 		
-		<body>
+		<body bgcolor="#ABE1A1">
+		
        <table align="center">
 			<td><br><font face="Arial" size="4" color="#000000">Formulario de registro</td>
 		</table>
@@ -64,7 +65,7 @@ function check(e) {
 		<tr>
 			<td>Genero: <font face="Arial" size="5" color="#FF0000">*</td>
 			<td align="left">
-			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');"> 
+			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba2');"> 
 <OPTION VALUE="link pagina 1">Masculino</OPTION>
 <OPTION VALUE="link pagina 2">Femenino</OPTION>
 <OPTION VALUE="link pagina 3">Otro</OPTION>
@@ -88,7 +89,7 @@ function check(e) {
 		<tr>
 			<td>Departamento Nac: <font face="Arial" size="5" color="#FF0000">*</td>
 			<td align="left">
-			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');"> 
+			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba3');"> 
 <OPTION VALUE="link pagina 1">Nariño</OPTION>
 <OPTION VALUE="link pagina 2">Putumayo</OPTION>
 <OPTION VALUE="link pagina 3">Valle del Cauca</OPTION>
@@ -106,7 +107,7 @@ function check(e) {
 		<tr>
 			<td align="left">Ciudad Nac: <font face="Arial" size="5" color="#FF0000">*</td>
 			<td align="left">
-			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');"> 
+			<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba4');"> 
 <OPTION VALUE="link pagina 1">Cali</OPTION>
 <OPTION VALUE="link pagina 2">Popayán</OPTION>
 <OPTION VALUE="link pagina 3">Pasto</OPTION>
@@ -144,8 +145,8 @@ function check(e) {
 		</table>
 		
 		<table align="center"><br>
-		<tr><div>
-			<td><input type="button" value="Registrarse"</td> 
+		<tr>
+			<td><input type="submit" value="Registrarse"</td> 
 		</tr>
 		</table>
 		
