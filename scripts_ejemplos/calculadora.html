@@ -1,0 +1,47 @@
+<html><!--mi comentario -->
+    <head>
+         <title>Calculadora</title>
+		 		
+	</head>
+	
+	<body>
+	  	<table align="center">
+		<form name="frm1" action ="calculadora.php" method ="POST" > <!--Enviar datos a cal.php -->
+			<td><br><font face="Arial" size="4" color="#000000">Calculadora</td>
+	
+		
+	<tr>
+			<td>Digite 1er Nro. <font face="Arial" size="5" color="#FF0000">*</td>
+			<td><input type="text" name="numero1" placeholder="Ingrese Nro. 1" maxlength="16"
+			onkeypress="if (event.keyCode < 45 || event.keyCode >57) event.returnValue = false;" required></td> </br>
+	</tr>
+	
+	<tr>
+			<td>Digite 2do Nro. <font face="Arial" size="5" color="#FF0000">*</td>
+			<td><input type="text" name="numero2" placeholder="Ingrese Nro. 2" maxlength="16"
+			onkeypress="if (event.keyCode < 45 || event.keyCode >57) event.returnValue = false;" required></td> </br>
+	</tr>
+	
+	<tr>
+			<td>Operaci&oacuten <font face="Arial" size="5" color="#FF0000">*</td>
+			<td align="left">
+			<select name="operar" SIZE=1 onChange="javascript:alert('prueba');"> 
+<option value="s">Sumar</option>
+<option value="r">Restar</option>
+<option value="d">Dividir</option>
+<option value="p">Potencia</option>
+<option value="c">Raiz Cuadrada</option>
+<option value="t">Todas las operaciones</option>  
+</select> 
+</td></br>
+	</tr>
+	
+	<tr><td><input type="submit"  value="Calcular" > <!--boton de ingreso de datos-->
+    </td></tr>
+	
+	</form>
+	</table>
+	</body>
+	
+	
+</html>
